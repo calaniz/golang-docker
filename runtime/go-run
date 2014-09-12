@@ -2,6 +2,9 @@
 
 set -e
 
+#start syslog
+/etc/init.d/inetutils-syslogd start
+
 if [ -f /gopath/src/app/.godir ]; then
     GODIR=$(cat /gopath/src/app/.godir)
     GOBIN=/gopath/bin/$(basename ${GODIR})
