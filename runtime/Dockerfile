@@ -6,8 +6,7 @@ ADD go-run /bin/go-run
 ONBUILD ADD . /gopath/src/app/
 ONBUILD RUN /bin/go-build
 
-EXPOSE 80
-EXPOSE 443
+EXPOSE 8080
 
 CMD []
 ENTRYPOINT ["/bin/go-run"]
